@@ -74,3 +74,18 @@ h1 b,h2 b,.b{font-weight:700}
 /* nav on narrow screens: five language codes need the room */
 nav>a b{white-space:nowrap}
 @media(max-width:600px){nav .links a:nth-child(n+3){display:none}nav .lang{gap:7px}nav .lang span{display:none}}
+/* contact form */
+.cf{display:grid;gap:clamp(14px,2vh,22px);font-family:var(--mono);font-size:14px;letter-spacing:.02em;width:100%}
+.cf .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.cf-field{display:grid;gap:6px}
+.cf-field span{font-size:11px;text-transform:uppercase;letter-spacing:.08em;opacity:.75}
+.cf input,.cf textarea{width:100%;background:transparent;border:0;border-bottom:1px solid rgba(255,255,255,.5);border-radius:0;color:#fff;font:inherit;font-size:16px;padding:8px 0;outline:none;transition:border-color .2s;resize:vertical}
+.cf input:focus,.cf textarea:focus{border-color:#fff}
+.cf input::placeholder,.cf textarea::placeholder{color:rgba(255,255,255,.5)}
+.cf-row{display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-top:6px}
+.cf button{font:inherit;font-weight:500;background:#fff;color:var(--v-deep);border:0;border-radius:999px;padding:12px 26px;cursor:pointer;transition:opacity .2s}
+.cf button:hover{opacity:.85}.cf button:disabled{opacity:.6;cursor:wait}
+.cf-msg{display:none;margin:0;font-size:13px}
+.cf-msg:target,.cf-msg[data-show]{display:block}
+.cf-turnstile{min-height:65px}
+@media (prefers-reduced-motion: reduce){.cf input,.cf textarea,.cf button{transition:none}}

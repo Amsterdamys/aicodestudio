@@ -1,0 +1,59 @@
+---
+import type { Dict, Locale } from '../i18n';
+const { dict, locale } = Astro.props as { dict: Dict; locale: Locale };
+const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
+---
+<form class="cf r" method="post" action="/api/contact" data-contact-form novalidate>
+  <input type="hidden" name="lang" value={locale} />
+  <p class="hp" aria-hidden="true"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off" /></label></p>
+  <label class="cf-field"><span>{dict.contact.name}</span><input type="text" name="name" required maxlength="100" autocomplete="name" /></label>
+  <label class="cf-field"><span>{dict.contact.email}</span><input type="email" name="email" required maxlength="254" autocomplete="email" /></label>
+  <label class="cf-field"><span>{dict.contact.message}</span><textarea name="message" required minlength="10" maxlength="5000" rows="3"></textarea></label>
+  {siteKey && <div class="cf-turnstile" data-sitekey={siteKey} data-theme="light" data-size="flexible"></div>}
+  <div class="cf-row">
+    <button type="submit" data-label={dict.contact.send} data-sending={dict.contact.sending}>{dict.contact.send}</button>
+    <p class="cf-msg" id="sent" role="status">{dict.contact.sent}</p>
+    <p class="cf-msg" id="error" role="alert">{dict.contact.error}</p>
+  </div>
+</form>
+{siteKey && <script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>}
+<script>
+  const form = document.querySelector<HTMLFormElement>('[data-contact-form]');
+  if (form) {
+    const button = form.querySelector<HTMLButtonElement>('button[type=submit]')!;
+    const sent = form.querySelector<HTMLElement>('#sent')!;
+    const error = form.querySelector<HTMLElement>('#error')!;
+    const show = (el: HTMLElement | null) => {
+      sent.toggleAttribute('data-show', el === sent);
+      error.toggleAttribute('data-show', el === error);
+    };
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (!form.reportValidity()) return;
+      show(null);
+      button.disabled = true;
+      button.textContent = button.dataset.sending ?? '…';
+      try {
+        const body = Object.fromEntries(new FormData(form).entries());
+        const res = await fetch(form.action, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify(body),
+        });
+        const json = (await res.json().catch(() => ({}))) as { ok?: boolean };
+        if (res.ok && json.ok) {
+          form.reset();
+          show(sent);
+        } else {
+          show(error);
+        }
+      } catch {
+        show(error);
+      } finally {
+        button.disabled = false;
+        button.textContent = button.dataset.label ?? '';
+        (window as any).turnstile?.reset?.();
+      }
+    });
+  }
+</script>
