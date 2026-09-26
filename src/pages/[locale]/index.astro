@@ -1,7 +1,16 @@
 ---
 import Base from '../../layouts/Base.astro';
-import Screen from '../../components/Screen.astro';
+import Hero from '../../components/Hero.astro';
+import Services from '../../components/Services.astro';
+import Stack from '../../components/Stack.astro';
+import Rule from '../../components/Rule.astro';
+import Process from '../../components/Process.astro';
+import Why from '../../components/Why.astro';
+import Shipped from '../../components/Shipped.astro';
+import Faq from '../../components/Faq.astro';
+import Contact from '../../components/Contact.astro';
 import { locales, t, type Locale } from '../../i18n';
+import { site } from '../../site.config';
 
 export function getStaticPaths() {
   return locales.map((locale) => ({ params: { locale } }));
@@ -10,9 +19,13 @@ const locale = Astro.params.locale as Locale;
 const dict = t(locale);
 ---
 <Base locale={locale} dict={dict}>
-  <Screen id="top" tone="violet" label={dict.hero.label} number="01">
-    <p class="k r">AI</p>
-    <h1 class="r">{dict.hero.headline}<b>{dict.hero.headlineBold}</b>{dict.hero.headlineTail}</h1>
-    <Fragment slot="footer"><span>{dict.hero.footerLeft}</span><span>{dict.hero.footerRight}</span></Fragment>
-  </Screen>
+  <Hero dict={dict} />
+  <Services dict={dict} />
+  <Stack dict={dict} />
+  <Rule dict={dict} />
+  <Process dict={dict} />
+  <Why dict={dict} />
+  {site.showShipped && <Shipped dict={dict} />}
+  <Faq dict={dict} />
+  <Contact dict={dict} locale={locale} />
 </Base>

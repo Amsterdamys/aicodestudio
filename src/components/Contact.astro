@@ -1,0 +1,28 @@
+---
+import Screen from './Screen.astro';
+import { site } from '../site.config';
+import type { Dict, Locale } from '../i18n';
+const { dict, locale } = Astro.props as { dict: Dict; locale: Locale };
+const [user, host] = site.email.split('@');
+const links = (
+  [
+    ['telegram', site.links.telegram, dict.contact.telegram],
+    ['github', site.links.github, dict.contact.github],
+    ['booking', site.links.booking, dict.contact.booking],
+  ] as const
+).filter((l): l is [string, string, string] => typeof l[1] === 'string');
+---
+<Screen id="contact" tone="violet" label={dict.contact.label} number="09">
+  <div class="contact">
+    <div class="contact-cta">
+      <a class="cta r" href={`mailto:${site.email}`}>{user}@<br />{host}</a>
+      {links.length > 0 && (
+        <div class="ch r">
+          {links.map(([key, href, label]) => <a href={href} data-link={key} rel="noopener" target="_blank">{label}</a>)}
+        </div>
+      )}
+    </div>
+    <slot />
+  </div>
+  <Fragment slot="footer"><span>{dict.contact.footerLeft}</span><span>{dict.contact.footerRight}</span></Fragment>
+</Screen>

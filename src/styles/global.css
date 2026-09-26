@@ -67,3 +67,10 @@ h1 b,h2 b,.b{font-weight:700}
   .r{opacity:1;transform:none;transition:none}
   .cur{animation:none}
 }
+/* contact layout */
+.contact{display:grid;gap:clamp(24px,4vw,64px);align-items:end}
+@media(min-width:900px){.contact{grid-template-columns:minmax(0,1.2fr) minmax(320px,.8fr)}}
+.contact-cta{display:grid;gap:clamp(18px,3vw,40px)}
+/* nav on narrow screens: five language codes need the room */
+nav>a b{white-space:nowrap}
+@media(max-width:600px){nav .links a:nth-child(n+3){display:none}nav .lang{gap:7px}nav .lang span{display:none}}

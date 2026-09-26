@@ -1,0 +1,10 @@
+---
+import Screen from './Screen.astro';
+import type { Dict } from '../i18n';
+const { dict } = Astro.props as { dict: Dict };
+---
+<Screen id="top" tone="violet" label={dict.hero.label} number="01">
+  <p class="k r">AI</p>
+  <h1 class="r">{dict.hero.headline}<b>{dict.hero.headlineBold}</b>{dict.hero.headlineTail}</h1>
+  <Fragment slot="footer"><span>{dict.hero.footerLeft}</span><span>{dict.hero.footerRight}</span></Fragment>
+</Screen>

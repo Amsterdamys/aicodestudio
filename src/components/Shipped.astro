@@ -1,0 +1,12 @@
+---
+import Screen from './Screen.astro';
+import type { Dict } from '../i18n';
+const { dict } = Astro.props as { dict: Dict };
+---
+<Screen id="work" tone="ink" label={dict.shipped.label} number="07">
+  <h2 class="r">{dict.shipped.headline}<b>{dict.shipped.headlineBold}</b>{dict.shipped.headlineTail}</h2>
+  <div class="ship r">
+    {dict.shipped.cards.map((c) => <div><span>{c.meta}</span><b>{c.title}</b></div>)}
+  </div>
+  <Fragment slot="footer"><span>{dict.shipped.footer}</span><span>↓</span></Fragment>
+</Screen>

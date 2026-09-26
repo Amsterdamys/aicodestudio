@@ -1,0 +1,10 @@
+---
+import Screen from './Screen.astro';
+import type { Dict } from '../i18n';
+const { dict } = Astro.props as { dict: Dict };
+---
+<Screen tone="ink" label={dict.rule.label} number="04">
+  <p class="k r">ROI</p>
+  <h2 class="r">{dict.rule.headline}<b>{dict.rule.headlineBold}</b>{dict.rule.headlineTail}</h2>
+  <Fragment slot="footer"><span>{dict.rule.footer}</span><span>↓</span></Fragment>
+</Screen>

@@ -1,0 +1,14 @@
+---
+import Screen from './Screen.astro';
+import type { Dict } from '../i18n';
+const { dict } = Astro.props as { dict: Dict };
+---
+<Screen id="process" tone="violet" label={dict.process.label} number="05">
+  <h2 class="r">{dict.process.headline}<b>{dict.process.headlineBold}</b>{dict.process.headlineTail}</h2>
+  <div class="steps r">
+    {dict.process.steps.map((s) => (
+      <div class="step"><i>{s.meta}</i><h3>{s.title}</h3><p>{s.text}</p></div>
+    ))}
+  </div>
+  <Fragment slot="footer"><span>{dict.process.footer}</span><span>↓</span></Fragment>
+</Screen>

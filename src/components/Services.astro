@@ -1,0 +1,13 @@
+---
+import Screen from './Screen.astro';
+import type { Dict } from '../i18n';
+const { dict } = Astro.props as { dict: Dict };
+---
+<Screen id="services" label={dict.services.label} number="02">
+  <div class="list r">
+    {dict.services.items.map((item, i) => (
+      <div class="row"><i>{String(i + 1).padStart(2, '0')}</i><span><b>{item.bold}</b> {item.rest}</span></div>
+    ))}
+  </div>
+  <Fragment slot="footer"><span>{dict.services.footer}</span><span>↓</span></Fragment>
+</Screen>

@@ -1,0 +1,17 @@
+---
+import Screen from './Screen.astro';
+import type { Dict } from '../i18n';
+const { dict } = Astro.props as { dict: Dict };
+const stack = dict.stack.rows.slice(0, 6);
+const integrations = dict.stack.rows.slice(6);
+---
+<Screen id="stack" tone="lilac" label={dict.stack.label} number="03">
+  <div class="con r">
+    <div class="cmd">{dict.stack.cmdStack}</div>
+    {stack.map((r) => <div class="c"><i>{r.key}</i><span>{r.value}</span></div>)}
+    <div class="cmd" style="margin-top:1em">{dict.stack.cmdIntegrations}</div>
+    {integrations.map((r) => <div class="c"><i>{r.key}</i><span>{r.value}</span></div>)}
+    <div class="cmd" style="margin-top:1em">_<span class="cur"></span></div>
+  </div>
+  <Fragment slot="footer"><span>{dict.stack.footer}</span><span>↓</span></Fragment>
+</Screen>
