@@ -1,0 +1,24 @@
+<script>
+  const io = new IntersectionObserver(
+    (es) =>
+      es.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      }),
+    { threshold: 0.15 },
+  );
+  document.querySelectorAll('.r').forEach((el) => io.observe(el));
+  const nav = document.querySelector('nav');
+  if (nav) {
+    const no = new IntersectionObserver(
+      (es) =>
+        es.forEach((e) => {
+          if (e.isIntersecting) nav.classList.toggle('light', e.target.matches('.violet,.ink'));
+        }),
+      { rootMargin: '-60px 0px -85% 0px' },
+    );
+    document.querySelectorAll('.s').forEach((s) => no.observe(s));
+  }
+</script>

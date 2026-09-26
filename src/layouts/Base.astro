@@ -1,0 +1,43 @@
+---
+import '../styles/global.css';
+import { locales, type Dict, type Locale } from '../i18n';
+import { site } from '../site.config';
+import Nav from '../components/Nav.astro';
+import Reveal from '../components/Reveal.astro';
+
+interface Props { locale: Locale; dict: Dict; title?: string; description?: string; noindex?: boolean }
+const { locale, dict, title = dict.meta.title, description = dict.meta.description, noindex = false } = Astro.props;
+const canonical = `${site.domain}/${locale}/`;
+const fonts =
+  'https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,700&family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@300;400;500;700&display=swap';
+---
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    {noindex ? <meta name="robots" content="noindex" /> : <link rel="canonical" href={canonical} />}
+    {!noindex && locales.map((l) => <link rel="alternate" hreflang={l} href={`${site.domain}/${l}/`} />)}
+    {!noindex && <link rel="alternate" hreflang="x-default" href={`${site.domain}/en/`} />}
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={site.name} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={`${site.domain}/og.png`} />
+    <meta property="og:locale" content={locale} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#3a9a94" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href={fonts} />
+  </head>
+  <body>
+    <Nav locale={locale} dict={dict} />
+    <slot />
+    <Reveal />
+  </body>
+</html>

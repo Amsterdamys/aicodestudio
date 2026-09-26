@@ -1,7 +1,18 @@
 ---
+import Base from '../../layouts/Base.astro';
+import Screen from '../../components/Screen.astro';
+import { locales, t, type Locale } from '../../i18n';
+
 export function getStaticPaths() {
-  return ['en', 'ru', 'es', 'de', 'fr'].map((locale) => ({ params: { locale } }));
+  return locales.map((locale) => ({ params: { locale } }));
 }
-const { locale } = Astro.params;
+const locale = Astro.params.locale as Locale;
+const dict = t(locale);
 ---
-<h1>{locale}</h1>
+<Base locale={locale} dict={dict}>
+  <Screen id="top" tone="violet" label={dict.hero.label} number="01">
+    <p class="k r">AI</p>
+    <h1 class="r">{dict.hero.headline}<b>{dict.hero.headlineBold}</b>{dict.hero.headlineTail}</h1>
+    <Fragment slot="footer"><span>{dict.hero.footerLeft}</span><span>{dict.hero.footerRight}</span></Fragment>
+  </Screen>
+</Base>

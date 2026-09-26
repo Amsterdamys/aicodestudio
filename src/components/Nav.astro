@@ -1,0 +1,26 @@
+---
+import { locales, type Dict, type Locale } from '../i18n';
+import { site } from '../site.config';
+interface Props { locale: Locale; dict: Dict }
+const { locale, dict } = Astro.props;
+const links: [string, string][] = [
+  ['#services', dict.nav.services],
+  ['#stack', dict.nav.stack],
+  ['#process', dict.nav.process],
+  ['#why', dict.nav.why],
+  ['#faq', dict.nav.faq],
+  ['#contact', dict.nav.contact],
+];
+---
+<nav>
+  <a href="#top"><b>{site.name}</b></a>
+  <div class="links">{links.map(([href, label]) => <a href={href}>{label}</a>)}</div>
+  <div class="lang" aria-label={dict.lang.switch}>
+    {locales.map((l, i) => (
+      <>
+        {i > 0 && <span>/</span>}
+        {l === locale ? <b aria-current="true">{l.toUpperCase()}</b> : <a href={`/?lang=${l}#top`} hreflang={l} lang={l}>{l.toUpperCase()}</a>}
+      </>
+    ))}
+  </div>
+</nav>
