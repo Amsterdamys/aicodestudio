@@ -56,7 +56,7 @@ four files. `npm test` fails if a key is missing anywhere.
 | `RESEND_FROM` | Cloudflare Pages variable | Sender, e.g. `AI Code Studio <hello@aicodestudio.dev>` once the domain is verified in Resend. Default `onboarding@resend.dev` (delivers only to the Resend account owner's address). |
 | `CONTACT_TO` | Cloudflare Pages variable | Recipient, default `aicodestudio@gmail.com` |
 | `TURNSTILE_SECRET` | Cloudflare Pages secret | Enables Turnstile verification; unset = honeypot only |
-| `PUBLIC_TURNSTILE_SITE_KEY` | Build-time (GitHub Actions variable) | Renders the Turnstile widget; unset = no widget |
+| `PUBLIC_TURNSTILE_SITE_KEY` | Build-time, committed in `.env` (public value) | Renders the Turnstile widget; unset = no widget. Must be set whenever `TURNSTILE_SECRET` is, or every submission is rejected. |
 | `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID` | GitHub Actions secrets | Used by the deploy workflow |
 
 ## Deployment
@@ -72,6 +72,6 @@ One-time setup:
 3. Resend: create an account with the Gmail above, make an API key, and
    `npx wrangler pages secret put RESEND_API_KEY --project-name=aicodestudio`.
 4. Optional Turnstile: create a widget for the domain, set `TURNSTILE_SECRET`
-   as a Pages secret and `gh variable set PUBLIC_TURNSTILE_SITE_KEY`.
+   as a Pages secret and put the site key in `.env` (commit it, it is public).
 5. Buy `aicodestudio.dev` at Cloudflare Registrar and add it as a custom domain
    of the Pages project. Verify the domain in Resend and set `RESEND_FROM`.

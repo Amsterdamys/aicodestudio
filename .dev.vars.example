@@ -3,5 +3,3 @@ RESEND_API_KEY=
 RESEND_FROM=
 CONTACT_TO=aicodestudio@gmail.com
 TURNSTILE_SECRET=
-# Public site key, read at build time by Astro (also set in CI as a variable)
-PUBLIC_TURNSTILE_SITE_KEY=
