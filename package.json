@@ -10,7 +10,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "test": "vitest run",
-    "pages:dev": "wrangler pages dev dist --compatibility-date=2026-09-01"
+    "pages:dev": "wrangler pages dev dist --compatibility-date=2026-09-01",
+    "og": "node scripts/og.mjs"
   },
   "keywords": [],
   "author": "",
@@ -22,6 +23,7 @@
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^5.20260926.1",
+    "@resvg/resvg-js": "^2.6.2",
     "typescript": "^7.0.2",
     "vitest": "^5.0.2",
     "wrangler": "^4.141.0"
