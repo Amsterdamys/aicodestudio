@@ -16,7 +16,13 @@ export function parseCookie(header: string | null, name: string): string | null 
   if (!header) return null;
   for (const part of header.split(';')) {
     const [k, ...v] = part.trim().split('=');
-    if (k === name) return decodeURIComponent(v.join('='));
+    if (k === name) {
+      try {
+        return decodeURIComponent(v.join('='));
+      } catch {
+        return null;
+      }
+    }
   }
   return null;
 }

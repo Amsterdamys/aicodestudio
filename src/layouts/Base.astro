@@ -33,11 +33,18 @@ const fonts =
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href={fonts} />
+    <link rel="preload" as="style" href={fonts} />
+    <link rel="stylesheet" href={fonts} media="print" onload="this.media='all'" />
+    <noscript>
+      <link rel="stylesheet" href={fonts} />
+      <style>.r{opacity:1;transform:none}</style>
+    </noscript>
   </head>
   <body>
     <Nav locale={locale} dict={dict} />
-    <slot />
+    <main>
+      <slot />
+    </main>
     <Reveal />
   </body>
 </html>

@@ -65,3 +65,14 @@ describe('root redirect on HEAD', () => {
     expect(res.headers.get('Location')).toBe('/es/');
   });
 });
+
+describe('malformed cookies', () => {
+  it('parseCookie returns null instead of throwing on a bad percent-encoding', () => {
+    expect(parseCookie('lang=%E0', 'lang')).toBeNull();
+  });
+  it('root redirect still answers 302 with a malformed lang cookie', async () => {
+    const res = await onRequestGet(ctx('https://aicodestudio.dev/', { Cookie: 'lang=%E0', 'CF-IPCountry': 'DE' }));
+    expect(res.status).toBe(302);
+    expect(res.headers.get('Location')).toBe('/de/');
+  });
+});

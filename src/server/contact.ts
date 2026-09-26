@@ -62,7 +62,7 @@ async function process(request: Request, data: Record<string, unknown>, env: Env
   const contact = result.data;
   if (env.TURNSTILE_SECRET) {
     const token = typeof data['cf-turnstile-response'] === 'string' ? data['cf-turnstile-response'] : '';
-    const passed = await verifyTurnstile(token, env.TURNSTILE_SECRET, request.headers.get('CF-Connecting-IP'), fetchImpl);
+    const passed = await verifyTurnstile(token, env.TURNSTILE_SECRET, request.headers.get('CF-Connecting-IP'), fetchImpl).catch(() => false);
     if (!passed) return { ok: false, status: 400, error: 'turnstile', lang: contact.lang };
   }
   const delivered = await send(contact, env, fetchImpl).catch(() => false);

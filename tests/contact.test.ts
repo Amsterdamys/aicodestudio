@@ -108,3 +108,15 @@ describe('handleContact', () => {
     expect(calls).toHaveLength(0);
   });
 });
+
+describe('handleContact network failures', () => {
+  it('treats a Turnstile network error as a failed check, not a crash', async () => {
+    const fetchImpl = (async (input: RequestInfo | URL) => {
+      if (String(input).startsWith(TURNSTILE)) throw new Error('network down');
+      return ok();
+    }) as typeof fetch;
+    const res = await handleContact(formReq(body), { ...env, TURNSTILE_SECRET: 's' }, fetchImpl);
+    expect(res.status).toBe(303);
+    expect(res.headers.get('Location')).toBe('/ru/#error');
+  });
+});

@@ -8,7 +8,7 @@ body{scroll-snap-type:y proximity}
 nav{position:fixed;top:0;left:0;right:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:18px clamp(20px,3vw,40px);font-size:13px;font-weight:500;letter-spacing:.02em;color:var(--ink);transition:color .3s}nav.light{color:#fff}
 nav .links{display:flex;gap:clamp(14px,2vw,28px)}
 nav .links a:nth-child(n+4){display:none}@media(min-width:900px){nav .links a:nth-child(n+4){display:inline}}
-nav .lang{display:flex;gap:6px;font-family:var(--mono);font-size:12px;letter-spacing:.04em}nav .lang span{opacity:.5}nav .lang b{font-weight:500}nav .lang a{opacity:.55}nav .lang a:hover{opacity:1}
+nav .lang{display:flex;gap:6px;font-family:var(--mono);font-size:12px;letter-spacing:.04em}nav .lang span{opacity:.5}nav .lang b{font-weight:500}nav .lang a:hover{opacity:1}
 .s{min-height:100vh;scroll-snap-align:start;display:grid;grid-template-rows:auto 1fr auto;padding:clamp(72px,10vh,110px) clamp(20px,3vw,40px) clamp(20px,3vw,40px);color:var(--fg,var(--ink));background:var(--bg,var(--paper))}
 .hd,.ft{display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:12px;letter-spacing:.04em;text-transform:uppercase;opacity:.75}
 .mid{display:grid;align-content:end;gap:clamp(18px,3vw,40px);padding:clamp(24px,4vh,48px) 0}
@@ -73,7 +73,7 @@ h1 b,h2 b,.b{font-weight:700}
 .contact-cta{display:grid;gap:clamp(18px,3vw,40px)}
 /* nav on narrow screens: five language codes need the room */
 nav>a b{white-space:nowrap}
-@media(max-width:600px){nav .links a:nth-child(n+3){display:none}nav .lang{gap:7px}nav .lang span{display:none}}
+@media(max-width:600px){nav .links a:nth-child(n+3){display:none}nav .lang span{display:none}}
 /* contact form */
 .cf{display:grid;gap:clamp(14px,2vh,22px);font-family:var(--mono);font-size:14px;letter-spacing:.02em;width:100%}
 .cf .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
@@ -89,3 +89,7 @@ nav>a b{white-space:nowrap}
 .cf-msg:target,.cf-msg[data-show]{display:block}
 .cf-turnstile{min-height:65px}
 @media (prefers-reduced-motion: reduce){.cf input,.cf textarea,.cf button{transition:none}}
+/* accessibility: 24px tap targets for the language codes, clearer inactive state */
+nav .lang{gap:0}nav .lang a,nav .lang b{display:inline-block;padding:6px 5px;margin:-6px 0;line-height:12px}nav .lang span{padding:0 1px}
+nav .lang a{opacity:.8}
+@media(max-width:480px){nav .links{display:none}}

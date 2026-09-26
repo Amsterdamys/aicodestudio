@@ -3,7 +3,7 @@ import type { Dict, Locale } from '../i18n';
 const { dict, locale } = Astro.props as { dict: Dict; locale: Locale };
 const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
 ---
-<form class="cf r" method="post" action="/api/contact" data-contact-form novalidate>
+<form class="cf r" method="post" action="/api/contact" data-contact-form>
   <input type="hidden" name="lang" value={locale} />
   <p class="hp" aria-hidden="true"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off" /></label></p>
   <label class="cf-field"><span>{dict.contact.name}</span><input type="text" name="name" required maxlength="100" autocomplete="name" /></label>
