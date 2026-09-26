@@ -49,6 +49,10 @@ async function send(contact: Contact, env: Env, fetchImpl: typeof fetch): Promis
       text,
     }),
   });
+  if (!res.ok) {
+    const detail = await res.text().catch(() => '');
+    console.error(`resend ${res.status}: ${detail.slice(0, 300)}`);
+  }
   return res.ok;
 }
 
@@ -66,7 +70,7 @@ async function process(request: Request, data: Record<string, unknown>, env: Env
     if (!passed) return { ok: false, status: 400, error: 'turnstile', lang: contact.lang };
   }
   const delivered = await send(contact, env, fetchImpl).catch(() => false);
-  if (!delivered) return { ok: false, status: 502, error: 'delivery', lang: contact.lang };
+  if (!delivered) return { ok: false, status: 500, error: 'delivery', lang: contact.lang };
   return { ok: true, lang: contact.lang };
 }
 

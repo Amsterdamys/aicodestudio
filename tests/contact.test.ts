@@ -49,10 +49,10 @@ describe('handleContact', () => {
     expect(sent.subject).toBe('New enquiry from Ada');
     expect((calls[0].init.headers as Record<string, string>).Authorization).toBe('Bearer k');
   });
-  it('reports a delivery failure as 502, never success', async () => {
+  it('reports a delivery failure as 500, never success', async () => {
     const { fetchImpl } = stubFetch({ [RESEND]: () => new Response('boom', { status: 500 }) });
     const res = await handleContact(jsonReq(body), env, fetchImpl);
-    expect(res.status).toBe(502);
+    expect(res.status).toBe(500);
     expect(await res.json()).toEqual({ ok: false, error: 'delivery' });
   });
   it('redirects a form post to the locale page with #sent', async () => {
@@ -104,7 +104,7 @@ describe('handleContact', () => {
   it('returns 500 delivery error when no API key is configured', async () => {
     const { fetchImpl, calls } = stubFetch({ [RESEND]: ok });
     const res = await handleContact(jsonReq(body), {}, fetchImpl);
-    expect(res.status).toBe(502);
+    expect(res.status).toBe(500);
     expect(calls).toHaveLength(0);
   });
 });
