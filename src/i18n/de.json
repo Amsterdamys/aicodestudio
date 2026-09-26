@@ -16,42 +16,42 @@
     "headline": "Software für kleine und mittlere Unternehmen, mit ",
     "headlineBold": "eingebauter Intelligenz",
     "headlineTail": ".",
-    "footerLeft": "AI Code Studio",
-    "footerRight": "Scrollen ↓"
+    "cta": "Sprechen Sie mit uns →"
   },
   "services": {
     "label": "Was wir tun",
     "items": [
       {
-        "bold": "Websites",
-        "rest": "und Webanwendungen"
+        "key": "web",
+        "title": "Websites und Web-Apps",
+        "text": "Marketing-Websites, Kundenportale, interne Tools. Gebaut, um jahrelang gepflegt zu werden."
       },
       {
-        "bold": "Mobile Apps",
-        "rest": "für iOS und Android"
+        "key": "mobile",
+        "title": "Mobile Apps",
+        "text": "iOS- und Android-Apps für Ihre Kunden oder Ihr Außendienstteam, eine Codebasis."
       },
       {
-        "bold": "KI",
-        "rest": "in Ihren täglichen Abläufen"
+        "key": "desktop",
+        "title": "Desktop-Tools für Teams",
+        "text": "Plattformübergreifende Apps und interne Werkzeuge, wo ein Browser-Tab nicht reicht."
       },
       {
-        "bold": "Desktop-Tools",
-        "rest": "für Teams"
+        "key": "ai",
+        "title": "KI in Ihren Abläufen",
+        "text": "Assistenten, Dokumentenleser, Entscheidungshilfen – in den Tools, die Sie bereits nutzen."
       },
       {
-        "bold": "Integrationen",
-        "rest": "zwischen Ihren Systemen"
+        "key": "integrations",
+        "title": "Integrationen und Dokumente",
+        "text": "CRM, ERP, Zahlungen und Messenger, die miteinander sprechen. PDFs und Scans werden zu Daten."
       },
       {
-        "bold": "Dokumente",
-        "rest": "werden zu Daten"
-      },
-      {
-        "bold": "Support",
-        "rest": "und technische Beratung"
+        "key": "support",
+        "title": "Support und Beratung",
+        "text": "Laufende Betreuung, Audits und ehrliche technische Einschätzungen. Monatlich oder stündlich."
       }
-    ],
-    "footer": "Sieben Dinge, richtig gemacht"
+    ]
   },
   "stack": {
     "label": "Womit wir arbeiten",
@@ -98,15 +98,13 @@
         "key": "docs",
         "value": "PDF · DOCX · XLSX · OCR"
       }
-    ],
-    "footer": "Nicht auf der Liste? Fragen Sie."
+    ]
   },
   "rule": {
     "label": "Wie wir denken",
     "headline": "KI dort, wo sie sich rechnet. ",
     "headlineBold": "Nicht",
-    "headlineTail": " dort, wo sie gerade Mode ist.",
-    "footer": "Unsere einzige Regel"
+    "headlineTail": " dort, wo sie gerade Mode ist."
   },
   "process": {
     "label": "Wie wir arbeiten",
@@ -139,8 +137,7 @@
         "title": "Ausbau",
         "text": "Support und neue Funktionen nach Bedarf."
       }
-    ],
-    "footer": "Sie sprechen direkt mit dem Entwickler"
+    ]
   },
   "why": {
     "label": "Warum wir",
@@ -163,8 +160,7 @@
         "title": "Voller Zyklus",
         "text": "Design, Entwicklung, Launch, Support. Ein Vertrag."
       }
-    ],
-    "footer": "NDA auf Anfrage"
+    ]
   },
   "shipped": {
     "label": "Kürzlich geliefert",
@@ -184,8 +180,7 @@
         "meta": "Integration · 2026",
         "title": "Demnächst"
       }
-    ],
-    "footer": "Manche Arbeiten unterliegen einer NDA"
+    ]
   },
   "faq": {
     "label": "Fragen",
@@ -210,8 +205,7 @@
         "q": "Arbeiten Sie mit Vertrag?",
         "a": "Ja. Feste Phasen, Zahlung bei Lieferung, NDA auf Anfrage."
       }
-    ],
-    "footer": "Noch Fragen? Schreiben Sie uns unten"
+    ]
   },
   "contact": {
     "label": "Sprechen Sie mit uns",

@@ -1,13 +1,19 @@
 ---
 import Screen from './Screen.astro';
+import ServiceIcon from './ServiceIcon.astro';
 import type { Dict } from '../i18n';
 const { dict } = Astro.props as { dict: Dict };
 ---
 <Screen id="services" label={dict.services.label} number="02">
-  <div class="list r">
+  <h2 class="sr">{dict.services.label}</h2>
+  <div class="cards r">
     {dict.services.items.map((item, i) => (
-      <div class="row"><i>{String(i + 1).padStart(2, '0')}</i><span><b>{item.bold}</b> {item.rest}</span></div>
+      <div class="card">
+        <div class="top"><span>{String(i + 1).padStart(2, '0')}</span><span>{item.key}</span></div>
+        <ServiceIcon icon={item.key} />
+        <h3>{item.title}</h3>
+        <p>{item.text}</p>
+      </div>
     ))}
   </div>
-  <Fragment slot="footer"><span>{dict.services.footer}</span><span>↓</span></Fragment>
 </Screen>

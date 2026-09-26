@@ -1,0 +1,5 @@
+---
+import type { Dict } from '../i18n';
+const { dict } = Astro.props as { dict: Dict };
+---
+<footer><div class="in"><span>{dict.contact.footerLeft}</span><span>{dict.contact.footerRight}</span></div></footer>

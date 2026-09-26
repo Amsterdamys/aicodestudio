@@ -9,6 +9,7 @@ import Why from '../../components/Why.astro';
 import Shipped from '../../components/Shipped.astro';
 import Faq from '../../components/Faq.astro';
 import Contact from '../../components/Contact.astro';
+import Footer from '../../components/Footer.astro';
 import { locales, t, type Locale } from '../../i18n';
 import { site } from '../../site.config';
 
@@ -28,4 +29,5 @@ const dict = t(locale);
   {site.showShipped && <Shipped dict={dict} />}
   <Faq dict={dict} />
   <Contact dict={dict} locale={locale} />
+  <Footer dict={dict} />
 </Base>

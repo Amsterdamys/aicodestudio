@@ -3,10 +3,9 @@ import Screen from './Screen.astro';
 import type { Dict } from '../i18n';
 const { dict } = Astro.props as { dict: Dict };
 ---
-<Screen id="why" label={dict.why.label} number="06">
+<Screen id="why" tone="sand" label={dict.why.label} number="06">
   <h2 class="r"><b>{dict.why.headlineBold}</b>{dict.why.headline}</h2>
   <div class="why r">
     {dict.why.items.map((w) => <div><h3>{w.title}</h3><p>{w.text}</p></div>)}
   </div>
-  <Fragment slot="footer"><span>{dict.why.footer}</span><span>↓</span></Fragment>
 </Screen>

@@ -13,14 +13,22 @@ const links: [string, string][] = [
 ];
 ---
 <nav>
-  <a href="#top"><b>{site.name}</b></a>
-  <div class="links">{links.map(([href, label]) => <a href={href}>{label}</a>)}</div>
-  <div class="lang" aria-label={dict.lang.switch}>
-    {locales.map((l, i) => (
-      <>
-        {i > 0 && <span>/</span>}
-        {l === locale ? <b aria-current="true">{l.toUpperCase()}</b> : <a href={`/?lang=${l}#top`} hreflang={l} lang={l}>{l.toUpperCase()}</a>}
-      </>
-    ))}
+  <div class="in">
+    <a href="#top"><b>{site.name}</b></a>
+    <div class="links">{links.map(([href, label]) => <a href={href}>{label}</a>)}</div>
+    <div class="lang">
+      <form action="/" method="get" data-lang-form>
+        <select name="lang" aria-label={dict.lang.switch}>
+          {locales.map((l) => <option value={l} selected={l === locale}>{l.toUpperCase()}</option>)}
+        </select>
+        <noscript><button type="submit">→</button></noscript>
+      </form>
+    </div>
   </div>
 </nav>
+<script>
+  document.querySelector<HTMLSelectElement>('[data-lang-form] select')?.addEventListener('change', (e) => {
+    const lang = (e.target as HTMLSelectElement).value;
+    window.location.href = `/?lang=${encodeURIComponent(lang)}`;
+  });
+</script>

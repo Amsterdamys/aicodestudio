@@ -16,42 +16,42 @@
     "headline": "Software para pequeñas y medianas empresas, con ",
     "headlineBold": "inteligencia integrada",
     "headlineTail": ".",
-    "footerLeft": "AI Code Studio",
-    "footerRight": "Desplázate ↓"
+    "cta": "Hable con nosotros →"
   },
   "services": {
     "label": "Qué hacemos",
     "items": [
       {
-        "bold": "Sitios web",
-        "rest": "y aplicaciones web"
+        "key": "web",
+        "title": "Sitios y aplicaciones web",
+        "text": "Sitios de marketing, portales de clientes, herramientas internas. Hechos para mantenerse durante años."
       },
       {
-        "bold": "Apps móviles",
-        "rest": "para iOS y Android"
+        "key": "mobile",
+        "title": "Apps móviles",
+        "text": "Apps para iOS y Android para sus clientes o su equipo de campo, con una sola base de código."
       },
       {
-        "bold": "IA",
-        "rest": "dentro de sus flujos de trabajo diarios"
+        "key": "desktop",
+        "title": "Herramientas de escritorio",
+        "text": "Aplicaciones multiplataforma y utilidades internas cuando una pestaña del navegador no basta."
       },
       {
-        "bold": "Herramientas de escritorio",
-        "rest": "para equipos"
+        "key": "ai",
+        "title": "IA en sus procesos",
+        "text": "Asistentes, lectores de documentos, ayudas a la decisión, dentro de las herramientas que ya usa."
       },
       {
-        "bold": "Integraciones",
-        "rest": "entre sus sistemas"
+        "key": "integrations",
+        "title": "Integraciones y documentos",
+        "text": "CRM, ERP, pagos y mensajería hablando entre sí. PDFs y escaneos convertidos en datos."
       },
       {
-        "bold": "Documentos",
-        "rest": "convertidos en datos"
-      },
-      {
-        "bold": "Soporte",
-        "rest": "y asesoría técnica"
+        "key": "support",
+        "title": "Soporte y asesoría",
+        "text": "Acompañamiento continuo, auditorías y opiniones técnicas honestas. Mensual o por horas."
       }
-    ],
-    "footer": "Siete cosas, bien hechas"
+    ]
   },
   "stack": {
     "label": "Con qué trabajamos",
@@ -98,15 +98,13 @@
         "key": "docs",
         "value": "PDF · DOCX · XLSX · OCR"
       }
-    ],
-    "footer": "¿No está en la lista? Pregunte."
+    ]
   },
   "rule": {
     "label": "Cómo pensamos",
     "headline": "IA donde rinde. ",
     "headlineBold": "No",
-    "headlineTail": " donde está de moda.",
-    "footer": "Nuestra única regla"
+    "headlineTail": " donde está de moda."
   },
   "process": {
     "label": "Cómo trabajamos",
@@ -139,8 +137,7 @@
         "title": "Crecer",
         "text": "Soporte y nuevas funciones, según necesidad."
       }
-    ],
-    "footer": "Habla directamente con el ingeniero"
+    ]
   },
   "why": {
     "label": "Por qué nosotros",
@@ -163,8 +160,7 @@
         "title": "Ciclo completo",
         "text": "Diseño, desarrollo, lanzamiento, soporte. Un solo contrato."
       }
-    ],
-    "footer": "NDA bajo petición"
+    ]
   },
   "shipped": {
     "label": "Entregas recientes",
@@ -184,8 +180,7 @@
         "meta": "Integración · 2026",
         "title": "Próximamente"
       }
-    ],
-    "footer": "Parte del trabajo está bajo NDA"
+    ]
   },
   "faq": {
     "label": "Preguntas",
@@ -210,8 +205,7 @@
         "q": "¿Trabajan con contrato?",
         "a": "Sí. Etapas fijas, pago contra entrega, NDA bajo petición."
       }
-    ],
-    "footer": "¿Algo más? Pregunte abajo"
+    ]
   },
   "contact": {
     "label": "Hable con nosotros",

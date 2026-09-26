@@ -1,15 +1,17 @@
 ---
 interface Props {
   id?: string;
-  tone?: 'paper' | 'violet' | 'lilac' | 'ink';
+  tone?: 'paper' | 'sand' | 'violet' | 'cocoa';
   label: string;
   number: string;
+  extraClass?: string;
 }
-const { id, tone = 'paper', label, number } = Astro.props;
-const cls = ['s', tone === 'paper' ? '' : tone].filter(Boolean).join(' ');
+const { id, tone = 'paper', label, number, extraClass } = Astro.props;
+const cls = ['s', tone === 'paper' ? '' : tone, extraClass].filter(Boolean).join(' ');
 ---
 <section class={cls} id={id} data-screen-label={`${number} ${label}`}>
-  <div class="hd"><span>{label}</span><span>{number}</span></div>
-  <div class="mid"><slot /></div>
-  <div class="ft"><slot name="footer" /></div>
+  <div class="in">
+    <div class="hd"><span>{label}</span><span>{number}</span></div>
+    <div class="mid"><slot /></div>
+  </div>
 </section>
