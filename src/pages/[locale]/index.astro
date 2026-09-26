@@ -1,0 +1,7 @@
+---
+export function getStaticPaths() {
+  return ['en', 'ru', 'es', 'de', 'fr'].map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params;
+---
+<h1>{locale}</h1>
