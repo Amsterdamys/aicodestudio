@@ -1,127 +1,234 @@
 {
   "meta": {
-    "title": "AI Code Studio — Software with intelligence built in",
-    "description": "Websites, web and mobile apps, desktop tools and AI integrations for small and medium businesses. Senior engineers, fixed stages, no surprises in the invoice."
+    "title": "AI Code Studio — Software mit eingebauter Intelligenz",
+    "description": "Websites, Web- und Mobile-Apps, Desktop-Tools und KI-Integrationen für kleine und mittlere Unternehmen. Senior-Entwickler, Festpreis pro Phase."
   },
   "nav": {
-    "services": "Services",
+    "services": "Leistungen",
     "stack": "Stack",
-    "process": "Process",
-    "why": "Why us",
+    "process": "Ablauf",
+    "why": "Warum wir",
     "faq": "FAQ",
-    "contact": "Contact"
+    "contact": "Kontakt"
   },
   "hero": {
-    "label": "Software · AI · Automation",
-    "headline": "Software for small and medium businesses, with ",
-    "headlineBold": "intelligence built in",
+    "label": "Software · KI · Automatisierung",
+    "headline": "Software für kleine und mittlere Unternehmen, mit ",
+    "headlineBold": "eingebauter Intelligenz",
     "headlineTail": ".",
     "footerLeft": "AI Code Studio",
-    "footerRight": "Scroll ↓"
+    "footerRight": "Scrollen ↓"
   },
   "services": {
-    "label": "What we do",
+    "label": "Was wir tun",
     "items": [
-      { "bold": "Websites", "rest": "and web applications" },
-      { "bold": "Mobile apps", "rest": "for iOS and Android" },
-      { "bold": "AI", "rest": "inside your daily workflows" },
-      { "bold": "Desktop", "rest": "tools for teams" },
-      { "bold": "Integrations", "rest": "between your systems" },
-      { "bold": "Documents", "rest": "turned into data" },
-      { "bold": "Support", "rest": "and technical advice" }
+      {
+        "bold": "Websites",
+        "rest": "und Webanwendungen"
+      },
+      {
+        "bold": "Mobile Apps",
+        "rest": "für iOS und Android"
+      },
+      {
+        "bold": "KI",
+        "rest": "in Ihren täglichen Abläufen"
+      },
+      {
+        "bold": "Desktop-Tools",
+        "rest": "für Teams"
+      },
+      {
+        "bold": "Integrationen",
+        "rest": "zwischen Ihren Systemen"
+      },
+      {
+        "bold": "Dokumente",
+        "rest": "werden zu Daten"
+      },
+      {
+        "bold": "Support",
+        "rest": "und technische Beratung"
+      }
     ],
-    "footer": "Seven things, done properly"
+    "footer": "Sieben Dinge, richtig gemacht"
   },
   "stack": {
-    "label": "What we work with",
+    "label": "Womit wir arbeiten",
     "cmdStack": "ai-code-studio --stack",
     "cmdIntegrations": "ai-code-studio --integrations",
     "rows": [
-      { "key": "web", "value": "TypeScript · React · Next.js · Node.js" },
-      { "key": "mobile", "value": "Flutter · React Native" },
-      { "key": "backend", "value": "Python · Go · Node.js · TypeScript" },
-      { "key": "ai", "value": "OpenAI · Anthropic · Llama · RAG pipelines" },
-      { "key": "desktop", "value": "Tauri · Flutter · Electron" },
-      { "key": "infra", "value": "Docker · Cloudflare · AWS" },
-      { "key": "work", "value": "Google Workspace · Microsoft 365 · Notion · Slack · Telegram" },
-      { "key": "crm", "value": "HubSpot · Bitrix24 · amoCRM · 1C" },
-      { "key": "money", "value": "Stripe · YooKassa" },
-      { "key": "docs", "value": "PDF · DOCX · XLSX · OCR" }
+      {
+        "key": "web",
+        "value": "TypeScript · React · Next.js · Node.js"
+      },
+      {
+        "key": "mobile",
+        "value": "Flutter · React Native"
+      },
+      {
+        "key": "backend",
+        "value": "Python · Go · Node.js · TypeScript"
+      },
+      {
+        "key": "ai",
+        "value": "OpenAI · Anthropic · Llama · RAG-Pipelines"
+      },
+      {
+        "key": "desktop",
+        "value": "Tauri · Flutter · Electron"
+      },
+      {
+        "key": "infra",
+        "value": "Docker · Cloudflare · AWS"
+      },
+      {
+        "key": "work",
+        "value": "Google Workspace · Microsoft 365 · Notion · Slack · Telegram"
+      },
+      {
+        "key": "crm",
+        "value": "HubSpot · Bitrix24 · amoCRM · 1C"
+      },
+      {
+        "key": "money",
+        "value": "Stripe · YooKassa"
+      },
+      {
+        "key": "docs",
+        "value": "PDF · DOCX · XLSX · OCR"
+      }
     ],
-    "footer": "Not on the list? Ask."
+    "footer": "Nicht auf der Liste? Fragen Sie."
   },
   "rule": {
-    "label": "How we think",
-    "headline": "AI where it pays off. ",
-    "headlineBold": "Not",
-    "headlineTail": " where it is fashionable.",
-    "footer": "Our one rule"
+    "label": "Wie wir denken",
+    "headline": "KI dort, wo sie sich rechnet. ",
+    "headlineBold": "Nicht",
+    "headlineTail": " dort, wo sie gerade Mode ist.",
+    "footer": "Unsere einzige Regel"
   },
   "process": {
-    "label": "How we work",
-    "headline": "Five steps. ",
-    "headlineBold": "No surprises",
-    "headlineTail": " in the invoice.",
+    "label": "Wie wir arbeiten",
+    "headline": "Fünf Schritte. ",
+    "headlineBold": "Keine Überraschungen",
+    "headlineTail": " auf der Rechnung.",
     "steps": [
-      { "meta": "01 · 1 hour", "title": "Talk", "text": "Goals, constraints, a rough scope. Free." },
-      { "meta": "02 · 3–5 days", "title": "Plan", "text": "Fixed stages, timeline and budget." },
-      { "meta": "03 · weeks", "title": "Build", "text": "A demo every one to two weeks." },
-      { "meta": "04 · 1–2 weeks", "title": "Launch", "text": "Deploy, document, train your team." },
-      { "meta": "05 · ongoing", "title": "Grow", "text": "Support and new features, as needed." }
+      {
+        "meta": "01 · 1 Stunde",
+        "title": "Gespräch",
+        "text": "Ziele, Rahmen, grober Umfang. Kostenlos."
+      },
+      {
+        "meta": "02 · 3–5 Tage",
+        "title": "Plan",
+        "text": "Feste Phasen, Zeitplan und Budget."
+      },
+      {
+        "meta": "03 · Wochen",
+        "title": "Umsetzung",
+        "text": "Eine Demo alle ein bis zwei Wochen."
+      },
+      {
+        "meta": "04 · 1–2 Wochen",
+        "title": "Launch",
+        "text": "Deployment, Dokumentation, Schulung Ihres Teams."
+      },
+      {
+        "meta": "05 · laufend",
+        "title": "Ausbau",
+        "text": "Support und neue Funktionen nach Bedarf."
+      }
     ],
-    "footer": "You talk to the engineer directly"
+    "footer": "Sie sprechen direkt mit dem Entwickler"
   },
   "why": {
-    "label": "Why us",
-    "headlineBold": "Small studio.",
-    "headline": " Senior only.",
+    "label": "Warum wir",
+    "headlineBold": "Kleines Studio.",
+    "headline": " Nur Senior.",
     "items": [
-      { "title": "Senior only", "text": "No juniors, no hand-offs. The person you meet writes the code." },
-      { "title": "Fixed stages", "text": "Price and dates agreed per stage. Pay on delivery." },
-      { "title": "Modern stack", "text": "Tools that will still be maintained in five years." },
-      { "title": "Full cycle", "text": "Design, build, launch, support. One contract." }
+      {
+        "title": "Nur Senior",
+        "text": "Keine Juniors, keine Übergaben. Wer mit Ihnen spricht, schreibt auch den Code."
+      },
+      {
+        "title": "Feste Phasen",
+        "text": "Preis und Termine pro Phase vereinbart. Zahlung bei Lieferung."
+      },
+      {
+        "title": "Moderner Stack",
+        "text": "Werkzeuge, die auch in fünf Jahren noch gepflegt werden."
+      },
+      {
+        "title": "Voller Zyklus",
+        "text": "Design, Entwicklung, Launch, Support. Ein Vertrag."
+      }
     ],
-    "footer": "NDA on request"
+    "footer": "NDA auf Anfrage"
   },
   "shipped": {
-    "label": "Recently shipped",
-    "headline": "Recent work. ",
-    "headlineBold": "Filling up",
-    "headlineTail": " as projects go public.",
+    "label": "Kürzlich geliefert",
+    "headline": "Aktuelle Arbeiten. ",
+    "headlineBold": "Wächst,",
+    "headlineTail": " sobald Projekte öffentlich werden.",
     "cards": [
-      { "meta": "Web app · 2026", "title": "Coming soon" },
-      { "meta": "AI assistant · 2026", "title": "Coming soon" },
-      { "meta": "Integration · 2026", "title": "Coming soon" }
+      {
+        "meta": "Web-App · 2026",
+        "title": "Demnächst"
+      },
+      {
+        "meta": "KI-Assistent · 2026",
+        "title": "Demnächst"
+      },
+      {
+        "meta": "Integration · 2026",
+        "title": "Demnächst"
+      }
     ],
-    "footer": "Some work is under NDA"
+    "footer": "Manche Arbeiten unterliegen einer NDA"
   },
   "faq": {
-    "label": "Questions",
+    "label": "Fragen",
     "items": [
-      { "q": "How much does a website cost?", "a": "Every stage has a fixed price, quoted before we start. A landing page is one stage; a company site or web app is scoped into several." },
-      { "q": "How soon can you start?", "a": "Usually within one to two weeks of agreeing the plan." },
-      { "q": "Can you add AI to the systems we already use?", "a": "In most cases, yes. We audit what you have and propose options that fit your stack and budget." },
-      { "q": "What happens after launch?", "a": "The first month of support is included. After that, a monthly plan or hourly." },
-      { "q": "Do you work under contract?", "a": "Yes. Fixed stages, payment on delivery, NDA on request." }
+      {
+        "q": "Was kostet eine Website?",
+        "a": "Jede Phase hat einen Festpreis, den Sie vor dem Start erfahren. Eine Landingpage ist eine Phase; eine Firmenwebsite oder Web-App wird in mehrere aufgeteilt."
+      },
+      {
+        "q": "Wie schnell können Sie anfangen?",
+        "a": "In der Regel innerhalb von ein bis zwei Wochen nach Abstimmung des Plans."
+      },
+      {
+        "q": "Können Sie KI in unsere bestehenden Systeme einbauen?",
+        "a": "In den meisten Fällen ja. Wir prüfen, was Sie haben, und schlagen Optionen vor, die zu Ihrem Stack und Budget passen."
+      },
+      {
+        "q": "Was passiert nach dem Launch?",
+        "a": "Der erste Monat Support ist inklusive. Danach ein Monatsplan oder Abrechnung nach Stunden."
+      },
+      {
+        "q": "Arbeiten Sie mit Vertrag?",
+        "a": "Ja. Feste Phasen, Zahlung bei Lieferung, NDA auf Anfrage."
+      }
     ],
-    "footer": "Anything else? Ask below"
+    "footer": "Noch Fragen? Schreiben Sie uns unten"
   },
   "contact": {
-    "label": "Talk to us",
-    "name": "Your name",
-    "email": "Email",
-    "message": "What do you want to build?",
-    "send": "Send",
-    "sending": "Sending…",
-    "sent": "Thank you. We reply within one business day.",
-    "error": "Something went wrong. Please email us directly.",
+    "label": "Sprechen Sie mit uns",
+    "name": "Ihr Name",
+    "email": "E-Mail",
+    "message": "Was möchten Sie bauen?",
+    "send": "Senden",
+    "sending": "Wird gesendet…",
+    "sent": "Danke. Wir antworten innerhalb eines Werktags.",
+    "error": "Etwas ist schiefgelaufen. Bitte schreiben Sie uns direkt per E-Mail.",
     "telegram": "Telegram",
     "github": "GitHub",
-    "booking": "Book a 30-min call",
+    "booking": "30-Minuten-Gespräch buchen",
     "footerLeft": "© 2026 AI Code Studio",
-    "footerRight": "Remote · Worldwide"
+    "footerRight": "Remote · Weltweit"
   },
   "lang": {
-    "switch": "Language"
+    "switch": "Sprache"
   }
 }

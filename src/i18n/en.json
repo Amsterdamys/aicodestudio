@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "AI Code Studio — Software with intelligence built in",
-    "description": "Websites, web and mobile apps, desktop tools and AI integrations for small and medium businesses. Senior engineers, fixed stages, no surprises in the invoice."
+    "description": "Websites, web and mobile apps, desktop tools and AI integrations for small and medium businesses. Senior engineers, fixed stages, no surprises."
   },
   "nav": {
     "services": "Services",
@@ -22,13 +22,34 @@
   "services": {
     "label": "What we do",
     "items": [
-      { "bold": "Websites", "rest": "and web applications" },
-      { "bold": "Mobile apps", "rest": "for iOS and Android" },
-      { "bold": "AI", "rest": "inside your daily workflows" },
-      { "bold": "Desktop", "rest": "tools for teams" },
-      { "bold": "Integrations", "rest": "between your systems" },
-      { "bold": "Documents", "rest": "turned into data" },
-      { "bold": "Support", "rest": "and technical advice" }
+      {
+        "bold": "Websites",
+        "rest": "and web applications"
+      },
+      {
+        "bold": "Mobile apps",
+        "rest": "for iOS and Android"
+      },
+      {
+        "bold": "AI",
+        "rest": "inside your daily workflows"
+      },
+      {
+        "bold": "Desktop",
+        "rest": "tools for teams"
+      },
+      {
+        "bold": "Integrations",
+        "rest": "between your systems"
+      },
+      {
+        "bold": "Documents",
+        "rest": "turned into data"
+      },
+      {
+        "bold": "Support",
+        "rest": "and technical advice"
+      }
     ],
     "footer": "Seven things, done properly"
   },
@@ -37,16 +58,46 @@
     "cmdStack": "ai-code-studio --stack",
     "cmdIntegrations": "ai-code-studio --integrations",
     "rows": [
-      { "key": "web", "value": "TypeScript · React · Next.js · Node.js" },
-      { "key": "mobile", "value": "Flutter · React Native" },
-      { "key": "backend", "value": "Python · Go · Node.js · TypeScript" },
-      { "key": "ai", "value": "OpenAI · Anthropic · Llama · RAG pipelines" },
-      { "key": "desktop", "value": "Tauri · Flutter · Electron" },
-      { "key": "infra", "value": "Docker · Cloudflare · AWS" },
-      { "key": "work", "value": "Google Workspace · Microsoft 365 · Notion · Slack · Telegram" },
-      { "key": "crm", "value": "HubSpot · Bitrix24 · amoCRM · 1C" },
-      { "key": "money", "value": "Stripe · YooKassa" },
-      { "key": "docs", "value": "PDF · DOCX · XLSX · OCR" }
+      {
+        "key": "web",
+        "value": "TypeScript · React · Next.js · Node.js"
+      },
+      {
+        "key": "mobile",
+        "value": "Flutter · React Native"
+      },
+      {
+        "key": "backend",
+        "value": "Python · Go · Node.js · TypeScript"
+      },
+      {
+        "key": "ai",
+        "value": "OpenAI · Anthropic · Llama · RAG pipelines"
+      },
+      {
+        "key": "desktop",
+        "value": "Tauri · Flutter · Electron"
+      },
+      {
+        "key": "infra",
+        "value": "Docker · Cloudflare · AWS"
+      },
+      {
+        "key": "work",
+        "value": "Google Workspace · Microsoft 365 · Notion · Slack · Telegram"
+      },
+      {
+        "key": "crm",
+        "value": "HubSpot · Bitrix24 · amoCRM · 1C"
+      },
+      {
+        "key": "money",
+        "value": "Stripe · YooKassa"
+      },
+      {
+        "key": "docs",
+        "value": "PDF · DOCX · XLSX · OCR"
+      }
     ],
     "footer": "Not on the list? Ask."
   },
@@ -63,11 +114,31 @@
     "headlineBold": "No surprises",
     "headlineTail": " in the invoice.",
     "steps": [
-      { "meta": "01 · 1 hour", "title": "Talk", "text": "Goals, constraints, a rough scope. Free." },
-      { "meta": "02 · 3–5 days", "title": "Plan", "text": "Fixed stages, timeline and budget." },
-      { "meta": "03 · weeks", "title": "Build", "text": "A demo every one to two weeks." },
-      { "meta": "04 · 1–2 weeks", "title": "Launch", "text": "Deploy, document, train your team." },
-      { "meta": "05 · ongoing", "title": "Grow", "text": "Support and new features, as needed." }
+      {
+        "meta": "01 · 1 hour",
+        "title": "Talk",
+        "text": "Goals, constraints, a rough scope. Free."
+      },
+      {
+        "meta": "02 · 3–5 days",
+        "title": "Plan",
+        "text": "Fixed stages, timeline and budget."
+      },
+      {
+        "meta": "03 · weeks",
+        "title": "Build",
+        "text": "A demo every one to two weeks."
+      },
+      {
+        "meta": "04 · 1–2 weeks",
+        "title": "Launch",
+        "text": "Deploy, document, train your team."
+      },
+      {
+        "meta": "05 · ongoing",
+        "title": "Grow",
+        "text": "Support and new features, as needed."
+      }
     ],
     "footer": "You talk to the engineer directly"
   },
@@ -76,10 +147,22 @@
     "headlineBold": "Small studio.",
     "headline": " Senior only.",
     "items": [
-      { "title": "Senior only", "text": "No juniors, no hand-offs. The person you meet writes the code." },
-      { "title": "Fixed stages", "text": "Price and dates agreed per stage. Pay on delivery." },
-      { "title": "Modern stack", "text": "Tools that will still be maintained in five years." },
-      { "title": "Full cycle", "text": "Design, build, launch, support. One contract." }
+      {
+        "title": "Senior only",
+        "text": "No juniors, no hand-offs. The person you meet writes the code."
+      },
+      {
+        "title": "Fixed stages",
+        "text": "Price and dates agreed per stage. Pay on delivery."
+      },
+      {
+        "title": "Modern stack",
+        "text": "Tools that will still be maintained in five years."
+      },
+      {
+        "title": "Full cycle",
+        "text": "Design, build, launch, support. One contract."
+      }
     ],
     "footer": "NDA on request"
   },
@@ -89,20 +172,44 @@
     "headlineBold": "Filling up",
     "headlineTail": " as projects go public.",
     "cards": [
-      { "meta": "Web app · 2026", "title": "Coming soon" },
-      { "meta": "AI assistant · 2026", "title": "Coming soon" },
-      { "meta": "Integration · 2026", "title": "Coming soon" }
+      {
+        "meta": "Web app · 2026",
+        "title": "Coming soon"
+      },
+      {
+        "meta": "AI assistant · 2026",
+        "title": "Coming soon"
+      },
+      {
+        "meta": "Integration · 2026",
+        "title": "Coming soon"
+      }
     ],
     "footer": "Some work is under NDA"
   },
   "faq": {
     "label": "Questions",
     "items": [
-      { "q": "How much does a website cost?", "a": "Every stage has a fixed price, quoted before we start. A landing page is one stage; a company site or web app is scoped into several." },
-      { "q": "How soon can you start?", "a": "Usually within one to two weeks of agreeing the plan." },
-      { "q": "Can you add AI to the systems we already use?", "a": "In most cases, yes. We audit what you have and propose options that fit your stack and budget." },
-      { "q": "What happens after launch?", "a": "The first month of support is included. After that, a monthly plan or hourly." },
-      { "q": "Do you work under contract?", "a": "Yes. Fixed stages, payment on delivery, NDA on request." }
+      {
+        "q": "How much does a website cost?",
+        "a": "Every stage has a fixed price, quoted before we start. A landing page is one stage; a company site or web app is scoped into several."
+      },
+      {
+        "q": "How soon can you start?",
+        "a": "Usually within one to two weeks of agreeing the plan."
+      },
+      {
+        "q": "Can you add AI to the systems we already use?",
+        "a": "In most cases, yes. We audit what you have and propose options that fit your stack and budget."
+      },
+      {
+        "q": "What happens after launch?",
+        "a": "The first month of support is included. After that, a monthly plan or hourly."
+      },
+      {
+        "q": "Do you work under contract?",
+        "a": "Yes. Fixed stages, payment on delivery, NDA on request."
+      }
     ],
     "footer": "Anything else? Ask below"
   },

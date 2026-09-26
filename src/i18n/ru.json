@@ -1,127 +1,234 @@
 {
   "meta": {
-    "title": "AI Code Studio — Software with intelligence built in",
-    "description": "Websites, web and mobile apps, desktop tools and AI integrations for small and medium businesses. Senior engineers, fixed stages, no surprises in the invoice."
+    "title": "AI Code Studio — Софт со встроенным интеллектом",
+    "description": "Сайты, веб- и мобильные приложения, десктопные инструменты и внедрение ИИ для малого и среднего бизнеса. Только senior, фиксированные этапы."
   },
   "nav": {
-    "services": "Services",
-    "stack": "Stack",
-    "process": "Process",
-    "why": "Why us",
-    "faq": "FAQ",
-    "contact": "Contact"
+    "services": "Услуги",
+    "stack": "Стек",
+    "process": "Процесс",
+    "why": "Почему мы",
+    "faq": "Вопросы",
+    "contact": "Контакты"
   },
   "hero": {
-    "label": "Software · AI · Automation",
-    "headline": "Software for small and medium businesses, with ",
-    "headlineBold": "intelligence built in",
+    "label": "Софт · ИИ · Автоматизация",
+    "headline": "Программное обеспечение для малого и среднего бизнеса — ",
+    "headlineBold": "с интеллектом внутри",
     "headlineTail": ".",
     "footerLeft": "AI Code Studio",
-    "footerRight": "Scroll ↓"
+    "footerRight": "Листайте ↓"
   },
   "services": {
-    "label": "What we do",
+    "label": "Что мы делаем",
     "items": [
-      { "bold": "Websites", "rest": "and web applications" },
-      { "bold": "Mobile apps", "rest": "for iOS and Android" },
-      { "bold": "AI", "rest": "inside your daily workflows" },
-      { "bold": "Desktop", "rest": "tools for teams" },
-      { "bold": "Integrations", "rest": "between your systems" },
-      { "bold": "Documents", "rest": "turned into data" },
-      { "bold": "Support", "rest": "and technical advice" }
+      {
+        "bold": "Сайты",
+        "rest": "и веб-приложения"
+      },
+      {
+        "bold": "Мобильные приложения",
+        "rest": "для iOS и Android"
+      },
+      {
+        "bold": "ИИ",
+        "rest": "внутри ваших рабочих процессов"
+      },
+      {
+        "bold": "Десктопные",
+        "rest": "инструменты для команд"
+      },
+      {
+        "bold": "Интеграции",
+        "rest": "между вашими системами"
+      },
+      {
+        "bold": "Документы",
+        "rest": "превращаем в данные"
+      },
+      {
+        "bold": "Поддержка",
+        "rest": "и технические консультации"
+      }
     ],
-    "footer": "Seven things, done properly"
+    "footer": "Семь вещей, сделанных как надо"
   },
   "stack": {
-    "label": "What we work with",
+    "label": "С чем мы работаем",
     "cmdStack": "ai-code-studio --stack",
     "cmdIntegrations": "ai-code-studio --integrations",
     "rows": [
-      { "key": "web", "value": "TypeScript · React · Next.js · Node.js" },
-      { "key": "mobile", "value": "Flutter · React Native" },
-      { "key": "backend", "value": "Python · Go · Node.js · TypeScript" },
-      { "key": "ai", "value": "OpenAI · Anthropic · Llama · RAG pipelines" },
-      { "key": "desktop", "value": "Tauri · Flutter · Electron" },
-      { "key": "infra", "value": "Docker · Cloudflare · AWS" },
-      { "key": "work", "value": "Google Workspace · Microsoft 365 · Notion · Slack · Telegram" },
-      { "key": "crm", "value": "HubSpot · Bitrix24 · amoCRM · 1C" },
-      { "key": "money", "value": "Stripe · YooKassa" },
-      { "key": "docs", "value": "PDF · DOCX · XLSX · OCR" }
+      {
+        "key": "web",
+        "value": "TypeScript · React · Next.js · Node.js"
+      },
+      {
+        "key": "mobile",
+        "value": "Flutter · React Native"
+      },
+      {
+        "key": "backend",
+        "value": "Python · Go · Node.js · TypeScript"
+      },
+      {
+        "key": "ai",
+        "value": "OpenAI · Anthropic · Llama · RAG-пайплайны"
+      },
+      {
+        "key": "desktop",
+        "value": "Tauri · Flutter · Electron"
+      },
+      {
+        "key": "infra",
+        "value": "Docker · Cloudflare · AWS"
+      },
+      {
+        "key": "work",
+        "value": "Google Workspace · Microsoft 365 · Notion · Slack · Telegram"
+      },
+      {
+        "key": "crm",
+        "value": "HubSpot · Битрикс24 · amoCRM · 1C"
+      },
+      {
+        "key": "money",
+        "value": "Stripe · ЮKassa"
+      },
+      {
+        "key": "docs",
+        "value": "PDF · DOCX · XLSX · OCR"
+      }
     ],
-    "footer": "Not on the list? Ask."
+    "footer": "Нет в списке? Спросите."
   },
   "rule": {
-    "label": "How we think",
-    "headline": "AI where it pays off. ",
-    "headlineBold": "Not",
-    "headlineTail": " where it is fashionable.",
-    "footer": "Our one rule"
+    "label": "Как мы думаем",
+    "headline": "ИИ там, где он окупается. ",
+    "headlineBold": "А не",
+    "headlineTail": " там, где это модно.",
+    "footer": "Наше единственное правило"
   },
   "process": {
-    "label": "How we work",
-    "headline": "Five steps. ",
-    "headlineBold": "No surprises",
-    "headlineTail": " in the invoice.",
+    "label": "Как мы работаем",
+    "headline": "Пять шагов. ",
+    "headlineBold": "Без сюрпризов",
+    "headlineTail": " в счёте.",
     "steps": [
-      { "meta": "01 · 1 hour", "title": "Talk", "text": "Goals, constraints, a rough scope. Free." },
-      { "meta": "02 · 3–5 days", "title": "Plan", "text": "Fixed stages, timeline and budget." },
-      { "meta": "03 · weeks", "title": "Build", "text": "A demo every one to two weeks." },
-      { "meta": "04 · 1–2 weeks", "title": "Launch", "text": "Deploy, document, train your team." },
-      { "meta": "05 · ongoing", "title": "Grow", "text": "Support and new features, as needed." }
+      {
+        "meta": "01 · 1 час",
+        "title": "Разговор",
+        "text": "Цели, ограничения, примерный объём. Бесплатно."
+      },
+      {
+        "meta": "02 · 3–5 дней",
+        "title": "План",
+        "text": "Фиксированные этапы, сроки и бюджет."
+      },
+      {
+        "meta": "03 · недели",
+        "title": "Разработка",
+        "text": "Демо каждые одну-две недели."
+      },
+      {
+        "meta": "04 · 1–2 недели",
+        "title": "Запуск",
+        "text": "Деплой, документация, обучение команды."
+      },
+      {
+        "meta": "05 · постоянно",
+        "title": "Развитие",
+        "text": "Поддержка и новые функции по мере необходимости."
+      }
     ],
-    "footer": "You talk to the engineer directly"
+    "footer": "Вы общаетесь напрямую с инженером"
   },
   "why": {
-    "label": "Why us",
-    "headlineBold": "Small studio.",
-    "headline": " Senior only.",
+    "label": "Почему мы",
+    "headlineBold": "Небольшая студия.",
+    "headline": " Только senior.",
     "items": [
-      { "title": "Senior only", "text": "No juniors, no hand-offs. The person you meet writes the code." },
-      { "title": "Fixed stages", "text": "Price and dates agreed per stage. Pay on delivery." },
-      { "title": "Modern stack", "text": "Tools that will still be maintained in five years." },
-      { "title": "Full cycle", "text": "Design, build, launch, support. One contract." }
+      {
+        "title": "Только senior",
+        "text": "Без джуниоров и передачи из рук в руки. Тот, с кем вы говорите, и пишет код."
+      },
+      {
+        "title": "Фиксированные этапы",
+        "text": "Цена и сроки согласованы на каждый этап. Оплата по факту сдачи."
+      },
+      {
+        "title": "Современный стек",
+        "text": "Инструменты, которые будут поддерживаться и через пять лет."
+      },
+      {
+        "title": "Полный цикл",
+        "text": "Дизайн, разработка, запуск, поддержка. Один договор."
+      }
     ],
-    "footer": "NDA on request"
+    "footer": "NDA по запросу"
   },
   "shipped": {
-    "label": "Recently shipped",
-    "headline": "Recent work. ",
-    "headlineBold": "Filling up",
-    "headlineTail": " as projects go public.",
+    "label": "Недавние проекты",
+    "headline": "Недавние работы. ",
+    "headlineBold": "Пополняется",
+    "headlineTail": " по мере публикации проектов.",
     "cards": [
-      { "meta": "Web app · 2026", "title": "Coming soon" },
-      { "meta": "AI assistant · 2026", "title": "Coming soon" },
-      { "meta": "Integration · 2026", "title": "Coming soon" }
+      {
+        "meta": "Веб-приложение · 2026",
+        "title": "Скоро"
+      },
+      {
+        "meta": "ИИ-ассистент · 2026",
+        "title": "Скоро"
+      },
+      {
+        "meta": "Интеграция · 2026",
+        "title": "Скоро"
+      }
     ],
-    "footer": "Some work is under NDA"
+    "footer": "Часть работ под NDA"
   },
   "faq": {
-    "label": "Questions",
+    "label": "Вопросы",
     "items": [
-      { "q": "How much does a website cost?", "a": "Every stage has a fixed price, quoted before we start. A landing page is one stage; a company site or web app is scoped into several." },
-      { "q": "How soon can you start?", "a": "Usually within one to two weeks of agreeing the plan." },
-      { "q": "Can you add AI to the systems we already use?", "a": "In most cases, yes. We audit what you have and propose options that fit your stack and budget." },
-      { "q": "What happens after launch?", "a": "The first month of support is included. After that, a monthly plan or hourly." },
-      { "q": "Do you work under contract?", "a": "Yes. Fixed stages, payment on delivery, NDA on request." }
+      {
+        "q": "Сколько стоит сайт?",
+        "a": "У каждого этапа фиксированная цена, которую вы узнаёте до старта. Лендинг — это один этап; корпоративный сайт или веб-приложение разбиваем на несколько."
+      },
+      {
+        "q": "Как скоро вы можете начать?",
+        "a": "Обычно в течение одной-двух недель после согласования плана."
+      },
+      {
+        "q": "Можете добавить ИИ в системы, которыми мы уже пользуемся?",
+        "a": "В большинстве случаев да. Мы изучаем то, что у вас есть, и предлагаем варианты под ваш стек и бюджет."
+      },
+      {
+        "q": "Что происходит после запуска?",
+        "a": "Первый месяц поддержки включён. Дальше — помесячный план или почасовая оплата."
+      },
+      {
+        "q": "Вы работаете по договору?",
+        "a": "Да. Фиксированные этапы, оплата по факту сдачи, NDA по запросу."
+      }
     ],
-    "footer": "Anything else? Ask below"
+    "footer": "Остались вопросы? Спросите ниже"
   },
   "contact": {
-    "label": "Talk to us",
-    "name": "Your name",
+    "label": "Напишите нам",
+    "name": "Ваше имя",
     "email": "Email",
-    "message": "What do you want to build?",
-    "send": "Send",
-    "sending": "Sending…",
-    "sent": "Thank you. We reply within one business day.",
-    "error": "Something went wrong. Please email us directly.",
+    "message": "Что вы хотите создать?",
+    "send": "Отправить",
+    "sending": "Отправляем…",
+    "sent": "Спасибо. Ответим в течение одного рабочего дня.",
+    "error": "Что-то пошло не так. Напишите нам напрямую на почту.",
     "telegram": "Telegram",
     "github": "GitHub",
-    "booking": "Book a 30-min call",
+    "booking": "Записаться на 30-минутный звонок",
     "footerLeft": "© 2026 AI Code Studio",
-    "footerRight": "Remote · Worldwide"
+    "footerRight": "Удалённо · По всему миру"
   },
   "lang": {
-    "switch": "Language"
+    "switch": "Язык"
   }
 }
