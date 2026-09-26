@@ -36,11 +36,12 @@ async function verifyTurnstile(token: string, secret: string, ip: string | null,
 }
 
 async function send(contact: Contact, env: Env, fetchImpl: typeof fetch): Promise<boolean> {
-  if (!env.RESEND_API_KEY) return false;
+  const apiKey = (env.RESEND_API_KEY ?? '').trim();
+  if (!apiKey) return false;
   const text = `Name: ${contact.name}\nEmail: ${contact.email}\nLanguage: ${contact.lang}\n\n${contact.message}\n`;
   const res = await fetchImpl(RESEND_URL, {
     method: 'POST',
-    headers: { Authorization: `Bearer ${env.RESEND_API_KEY}`, 'Content-Type': 'application/json' },
+    headers: { Authorization: `Bearer ${apiKey}`, 'Content-Type': 'application/json' },
     body: JSON.stringify({
       from: env.RESEND_FROM || DEFAULT_FROM,
       to: [env.CONTACT_TO || DEFAULT_TO],
