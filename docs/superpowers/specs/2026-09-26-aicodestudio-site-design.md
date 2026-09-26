@@ -12,7 +12,7 @@ lands in Gmail, five languages selected automatically per visitor, and
 unfinished blocks hidden rather than faked. Code lives on GitHub, the site
 runs on Cloudflare Pages under `aicodestudio.dev`.
 
-Source design: `AI Studio v2 (standalone).html` (a bundled export). The
+Source design: `docs/design/AI Studio v2 (standalone).html` (a bundled export). The
 visual design is kept as is: nine full-viewport, scroll-snapped screens,
 Bricolage Grotesque + IBM Plex Mono, the paper / teal / lilac / ink palette,
 fade-up reveal on scroll, nav that turns white over dark screens.

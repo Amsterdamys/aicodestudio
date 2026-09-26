@@ -14,7 +14,7 @@
 
 - Brand name everywhere: `AI Code Studio`; canonical origin `https://aicodestudio.dev`; contact email `aicodestudio@gmail.com`.
 - Locales exactly `en ru es de fr`, default `en`; routes `/{locale}/`; `/` redirects.
-- Visual design is the source HTML (`AI Studio v2 (standalone).html`): same palette, fonts, screen order, scroll-snap, reveal animation, nav colour switch. Do not restyle.
+- Visual design is the source HTML (`docs/design/AI Studio v2 (standalone).html`): same palette, fonts, screen order, scroll-snap, reveal animation, nav colour switch. Do not restyle.
 - Fonts from Google Fonts: Bricolage Grotesque 300/400/500/700, Manrope 300/400/500/700 (Cyrillic fallback), IBM Plex Mono 400/500 with `cyrillic` subset, `display=swap`.
 - Hidden by default: Shipped screen, Telegram, GitHub, Booking links. Hidden means not rendered in HTML.
 - Secrets only in Cloudflare env / GitHub secrets / git-ignored `.dev.vars`. Never in the repo.
