@@ -220,7 +220,8 @@
     "github": "GitHub",
     "booking": "Записаться на 30-минутный звонок",
     "footerLeft": "© 2026 AI Code Studio",
-    "footerRight": "Удалённо · По всему миру"
+    "footerRight": "Удалённо · По всему миру",
+    "supportLabel": "Для текущих клиентов"
   },
   "lang": {
     "switch": "Язык"

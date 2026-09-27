@@ -17,6 +17,7 @@ const links = (
   <div class="contact">
     <div class="contact-cta">
       <a class="cta r" href={`mailto:${site.email}`}>{user}@<br />{host}</a>
+      <p class="support r"><span>{dict.contact.supportLabel}</span><a href={`mailto:${site.supportEmail}`}>{site.supportEmail}</a></p>
       {links.length > 0 && (
         <div class="ch r">
           {links.map(([key, href, label]) => <a href={href} data-link={key} rel="noopener" target="_blank">{label}</a>)}

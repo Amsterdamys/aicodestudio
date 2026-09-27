@@ -220,7 +220,8 @@
     "github": "GitHub",
     "booking": "Reservar una llamada de 30 min",
     "footerLeft": "© 2026 AI Code Studio",
-    "footerRight": "Remoto · Todo el mundo"
+    "footerRight": "Remoto · Todo el mundo",
+    "supportLabel": "Clientes actuales"
   },
   "lang": {
     "switch": "Idioma"
