@@ -54,7 +54,7 @@ four files. `npm test` fails if a key is missing anywhere.
 |---|---|---|
 | `RESEND_API_KEY` | Cloudflare Pages secret | Sends the email |
 | `RESEND_FROM` | Cloudflare Pages variable | Sender, e.g. `AI Code Studio <hello@aicodestudio.dev>` once the domain is verified in Resend. Default `onboarding@resend.dev` (delivers only to the Resend account owner's address). |
-| `CONTACT_TO` | Cloudflare Pages variable | Recipient, default `aicodestudio@gmail.com` |
+| `CONTACT_TO` | Cloudflare Pages variable | Recipient, default `hello@aicodestudio.dev (forwarded to Gmail via Cloudflare Email Routing)` |
 | `TURNSTILE_SECRET` | Cloudflare Pages secret | Enables Turnstile verification; unset = honeypot only |
 | `PUBLIC_TURNSTILE_SITE_KEY` | Build-time, committed in `.env` (public value) | Renders the Turnstile widget; unset = no widget. Must be set whenever `TURNSTILE_SECRET` is, or every submission is rejected. |
 | `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID` | GitHub Actions secrets | Used by the deploy workflow |

@@ -10,7 +10,7 @@ export type Env = {
 const RESEND_URL = 'https://api.resend.com/emails';
 const TURNSTILE_URL = 'https://challenges.cloudflare.com/turnstile/v0/siteverify';
 const DEFAULT_FROM = 'AI Code Studio <onboarding@resend.dev>';
-const DEFAULT_TO = 'aicodestudio@gmail.com';
+const DEFAULT_TO = 'hello@aicodestudio.dev';
 
 type Outcome = { ok: true } | { ok: false; status: number; error: string };
 

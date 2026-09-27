@@ -18,7 +18,7 @@ function stubFetch(responses: Record<string, () => Response>) {
 const RESEND = 'https://api.resend.com/emails';
 const TURNSTILE = 'https://challenges.cloudflare.com/turnstile/v0/siteverify';
 const ok = () => new Response(JSON.stringify({ id: 'x' }), { status: 200 });
-const env: Env = { RESEND_API_KEY: 'k', CONTACT_TO: 'aicodestudio@gmail.com' };
+const env: Env = { RESEND_API_KEY: 'k', CONTACT_TO: 'hello@aicodestudio.dev' };
 const body = { name: 'Ada', email: 'ada@example.com', message: 'I need a web app for my bakery.', lang: 'ru' };
 
 function jsonReq(data: unknown) {
@@ -45,7 +45,7 @@ describe('handleContact', () => {
     expect(calls).toHaveLength(1);
     const sent = JSON.parse(String(calls[0].init.body));
     expect(sent.reply_to).toBe('ada@example.com');
-    expect(sent.to).toEqual(['aicodestudio@gmail.com']);
+    expect(sent.to).toEqual(['hello@aicodestudio.dev']);
     expect(sent.subject).toBe('New enquiry from Ada');
     expect((calls[0].init.headers as Record<string, string>).Authorization).toBe('Bearer k');
   });

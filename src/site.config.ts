@@ -1,7 +1,7 @@
 export const site = {
   name: 'AI Code Studio',
   domain: 'https://aicodestudio.dev',
-  email: 'aicodestudio@gmail.com',
+  email: 'hello@aicodestudio.dev',
   /** A string shows the link; null hides it. */
   links: {
     telegram: null as string | null,
